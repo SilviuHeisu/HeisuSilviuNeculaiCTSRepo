@@ -1,0 +1,42 @@
+package ro.ase.cts.g1099.recap.java.models;
+
+import ro.ase.cts.g1099.recap.java.exceptions.IllegalTransferException;
+
+public abstract class BankAccount extends Account{
+protected double balance;
+protected String iban;
+public BankAccount(String iban) {
+	this.iban=iban;
+}
+
+@Override
+public double getBalance() {
+	return this.balance;	
+}
+
+@Override
+public void deposit(double ammount) throws IllegalTransferException {
+	if(ammount<=0)
+		{throw new IllegalTransferException();}
+	this.balance+=ammount;
+	
+	
+}
+
+@Override
+public void withdraw(double ammount) throws IllegalTransferException {
+	if(ammount<=0)
+		{throw new IllegalTransferException();}
+	
+}
+
+@Override
+public void transfer(Account destination, double ammount) {
+	// TODO Auto-generated method stub
+	
+}
+
+
+
+
+}

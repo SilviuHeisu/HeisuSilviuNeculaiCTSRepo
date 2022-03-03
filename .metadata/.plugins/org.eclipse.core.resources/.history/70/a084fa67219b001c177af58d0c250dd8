@@ -1,0 +1,9 @@
+package ro.ase.cts.g1099.recap.java.models;
+
+public abstract class BankAccount {
+
+	public BankAccount() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,9 +1,13 @@
 package ro.ase.cts.g1099.recap.java.exceptions;
 
-public class InsufficientFundsException {
+public class InsufficientFundsException extends Exception{
 
-	public InsufficientFundsException() {
-		// TODO Auto-generated constructor stub
-	}
+public InsufficientFundsException(String msg) {
+super(msg);
 
+}
+public InsufficientFundsException() {
+super();
+
+}
 }
