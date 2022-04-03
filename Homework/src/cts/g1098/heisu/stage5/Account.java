@@ -1,6 +1,6 @@
-package cts.g1098.heisu.stage4;
+package cts.g1098.heisu.stage5;
 
-
+import cts.g1098.heisu.stage5.exceptions.InvalidLoanValue;
 
 public class Account {
 
@@ -24,7 +24,7 @@ public class Account {
 	
 	public void setLoanValue(double loanValue) throws Exception {
 		if(loanValue<0)
-			throw new Exception();
+			throw new InvalidLoanValue();
 		else
 		{
 			this.loanValue = loanValue;
@@ -55,7 +55,7 @@ public class Account {
 
 	public Account(double value, double rate, AccountType account_Type) throws Exception {
 		if(value<0)
-			throw new Exception();
+			throw new InvalidLoanValue();
 		else
 		{
 			loanValue = value;
