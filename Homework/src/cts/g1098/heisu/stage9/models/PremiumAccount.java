@@ -2,7 +2,7 @@ package cts.g1098.heisu.stage9.models;
 
 import cts.g1098.heisu.stage7.enumerations.AccountType;
 
-public  class PremiumAccount extends Account {
+public final class PremiumAccount extends Account {
 
 	public PremiumAccount(double loanValue, double rate, AccountType accountType) throws Exception {
 		super(loanValue, rate, accountType);

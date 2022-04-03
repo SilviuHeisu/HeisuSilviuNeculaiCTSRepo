@@ -1,0 +1,13 @@
+1. Use intention revealing names (Meaningful Names)
+2.minimize the accesibility of classes and members (Fundamentals)
+3.avoid excessive logs for unusual behaviour (Denial of Service)
+4.Use enums instead of int constants (Enums and Annotations)
+5.Use checked exceptions for recoverable conditions and runtime exceptions (Exceptions)
+6.avoid duplication of code and the use of unused variables (Functions, Fundamentals)
+7.classes should be small (Classes)
+8.functions should only do one thing (Functions)
+9.Make class final if not being used for inheritance
+
+
+
+
