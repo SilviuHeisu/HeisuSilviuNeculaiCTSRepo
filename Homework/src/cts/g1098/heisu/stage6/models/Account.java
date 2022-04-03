@@ -1,7 +1,8 @@
-package cts.g1098.heisu.stage5;
+package cts.g1098.heisu.stage6.models;
 
-import cts.g1098.heisu.stage5.enumerations.AccountType;
-import cts.g1098.heisu.stage5.exceptions.InvalidLoanValue;
+import cts.g1098.heisu.stage6.enumerations.AccountType;
+import cts.g1098.heisu.stage6.exceptions.InvalidLoanValue;
+
 
 public class Account {
 
@@ -36,20 +37,18 @@ public class Account {
 		return "Loan: "+this.loanValue+"; rate: "+this.rate+"; days active:"+daysActive+"; Type: "+accountType+";";
 	}
 	
-	public void print() {
-		int vb = 10;
-	}
+	
 
 	public static double calculateTotalFee(Account[] 	accounts)
 	{
 	double totalFee=0.0;
-	Account	account;
-	int temp = 365;
+	
+	
 	for	(int	i=0;i<accounts.length;i++)	{
-	account=accounts[i];
-	if(account.accountType==AccountType.PREMIUM||account.accountType==AccountType.SUPER_PREMIUM)	
+	
+	if(accounts[i].accountType==AccountType.PREMIUM||accounts[i].accountType==AccountType.SUPER_PREMIUM)	
 	totalFee+=.0125	*	(	//	1.25%	broker's	fee
-			account.loanValue*Math.pow(account.rate,(account.daysActive/365)) - account.loanValue);	//	interest-principal
+			accounts[i].loanValue*Math.pow(accounts[i].rate,(accounts[i].daysActive/365)) - accounts[i].loanValue);	//	interest-principal
 	}
 	return	totalFee;
 	}
