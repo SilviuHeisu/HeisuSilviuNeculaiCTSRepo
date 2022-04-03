@@ -24,7 +24,7 @@ public class Account {
 	// must have method - the lead has requested it in all classes
 
 	public double getMonthlyRate() {
-		return this.loanValue * rate;
+		return this.loanValue * this.rate;
 	}
 
 	public void setDaysActive(int daysActive) {
@@ -44,13 +44,13 @@ public class Account {
 				+ this.accountType + ";";
 	}
 
-	public Account(double value, double rate, AccountType account_Type) throws Exception {
-		if (value < 0)
+	public Account(double loanValue, double rate, AccountType accountType) throws Exception {
+		if (loanValue < 0)
 			throw new InvalidLoanValue();
 		else {
-			this.loanValue = value;
+			this.loanValue = loanValue;
 			this.rate = rate;
-			this.accountType = account_Type;
+			this.accountType = accountType;
 		}
 
 	}
