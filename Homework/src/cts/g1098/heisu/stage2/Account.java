@@ -3,6 +3,7 @@ package cts.g1098.heisu.stage2;
 
 
 public class Account {
+	//Minimize the accessibility of classes and members
 	private double	loanValue,rate;	
 	private int	daysActive,accountType;
 	private static final int	STANDARD=0,BUDGET=1,PREMIUM=2,SUPER_PREMIUM=3;
@@ -11,6 +12,7 @@ public class Account {
 		System.out.println("The loan value is " + this.loanValue);
 		return loanValue;
 	}
+	
 	
 	public double getRate() {
 		System.out.println("The rate is "+rate);
